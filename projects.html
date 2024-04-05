@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -112,7 +141,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#vital-signs-monitoring-using-microstrip-antenna---ads-matlab" id="toc-vital-signs-monitoring-using-microstrip-antenna---ads-matlab" class="nav-link active" data-scroll-target="#vital-signs-monitoring-using-microstrip-antenna---ads-matlab"><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -136,9 +171,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br> <em>Multi-thread GUI Traffic road system simulation</em> - Java <br> <em>Chess engine</em> - Python <br> <em>Automated Plant watering system</em> - C <br></p>
+<section id="vital-signs-monitoring-using-microstrip-antenna---ads-matlab" class="level3">
+<h3 class="anchored" data-anchor-id="vital-signs-monitoring-using-microstrip-antenna---ads-matlab"><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br></h3>
+<section id="aims" class="level4">
+<h4 class="anchored" data-anchor-id="aims">Aims</h4>
+<p>The aims of this project were to design and test a dual band microstrip antenna array for vital-signs monitoring applications. The required dual resonating frequencies are 2.45GHz and 5.8GHz respectively.</p>
+<p>Several micro strip arrays have been designed in ADS keysight software; two separate 4x1 arrays which resonate at 2.45GHz and 5.8GHz respectively, which were then combined through the use of rectangular stubs into a 2x4 array which resonates at both frequencies. The combined antenna array was then fabricated on campus at Heriot-watt university and subsequently experimentally tested for its S11 and far-field parameters to evaluate it’s performance.</p>
+</section>
+<section id="design" class="level4">
+<h4 class="anchored" data-anchor-id="design">Design</h4>
+<section id="array-design-parameters" class="level5">
+<h5 class="anchored" data-anchor-id="array-design-parameters">Array design parameters</h5>
+<p>The proposed resonating frequencies for the 4x2 final antenna array are 2.45GHz and 5.8GHz. The arrays are to be fabricated on FR-4 substrate, which has a dielectric constant of 4.5 <span class="math inline">\(\epsilon_r\)</span>, loss tangent of 0.022 and height of 1.6 mm. With copper etching of height 0.035 mm.</p>
+</section>
+<section id="quarter-wave-transformers" class="level5">
+<h5 class="anchored" data-anchor-id="quarter-wave-transformers">Quarter wave transformers</h5>
+<p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array. Combined arrays using both radial and rectangular stubs were initially implemented in ADS keysight and the simulations were compared (see results section); radial stubs have larger bandwidth than rectangular stubs due to their larger fringing capacitance on their outer edge, however rectangular stubs were better suited in this context, with superior S11, gain and directivity. This could be due to the ability to mirror them in parallel either side of the transmission line. This was not possible to do with the radial stubs adjacent to the 2.45GHz array due to the 12.92 mm distance from the centre of the feed line to the stub. ### <em>Multi-thread GUI Traffic road system simulation</em> - Java <br> ### <em>Chess engine</em> - Python <br> ### <em>Automated Plant watering system</em> - C <br></p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
