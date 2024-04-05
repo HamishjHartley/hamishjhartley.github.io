@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hamish Hartley",
+    "section": "",
+    "text": "Education\nMSc Advanced Computer Science - University of Strathclyde  Predicted Grade : Distinction\nBEng(Hons) Robotics, Autonomous and Interactive Systems - Heriot-Watt University  Grade : First Class Honors\n\n\nExperience\n\nAugust 2023 - January 2024, Stock replenishment, Sainsbury’s\nApril 2019 - August 2023, Chef, Lucky Pig\nDec 2018 - April 2019, FOH, National Museum of Scotland\n\n\n\nSkills\n\nPython (Django, Keras/TenorFlow,unittest, numpy, pandas) \nJava (JUnit, Swing, Maven) \nKotlin (Jetpack compose, Room API, Gradle) \nC (for embedded systems MC; Atmega328) \nLatex/Markdown (Overleaf, VScode, Quarto) \n\n\n\n\nGithub\nhttps://github.com/HamishjHartley"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Vital signs monitoring using Microstrip antenna - ADS, MATLAB  Multi-thread GUI Traffic road system simulation - Java  Chess engine - Python  Automated Plant watering system - C"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi my name’s Hamish, i’m a 23 years old and Glasgow based.  I’m currently enrolled on the MSc Advanced Computer Science course at the University of Strathclyde."
+  }
+]
