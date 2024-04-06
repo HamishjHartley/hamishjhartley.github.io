@@ -185,40 +185,28 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="design">Design</h4>
 <section id="array-design-parameters" class="level5">
 <h5 class="anchored" data-anchor-id="array-design-parameters">Array design parameters</h5>
-<p>Both 4x1 arrays were combined to form a 4x2 array which resonates at dual frequencies 2.45GHz and 5.8GHz. In order to combine the individual arrays, rectangular shunt stubs were used to match the characteristic impedance’s of both arrays’ respective feed lines. Stubs act as a DC open circuit and an RF short circuit corresponding to the 4/<span class="math inline">\(\lambda\)</span> length of the particular resonating frequency. The equivalent circuits are shown below in figure<span class="math inline">\(\ref{fig:equivalent}\)</span>:</p>
+<p>Both 4x1 arrays were combined to form a 4x2 array which resonates at dual frequencies 2.45GHz and 5.8GHz. In order to combine the individual arrays, rectangular shunt stubs were used to match the characteristic impedance’s of both arrays’ respective feed lines. Stubs act as a DC open circuit and an RF short circuit corresponding to the 4/<span class="math inline">\(\lambda\)</span> length of the particular resonating frequency.</p>
 </section>
 <section id="quarter-wave-transformers" class="level5">
 <h5 class="anchored" data-anchor-id="quarter-wave-transformers">Quarter wave transformers</h5>
-<p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array. Combined arrays using both radial and rectangular stubs were initially implemented in ADS keysight and the simulations were compared (see results section); radial stubs have larger bandwidth than rectangular stubs due to their larger fringing capacitance on their outer edge, however rectangular stubs were better suited in this context, with superior S11, gain and directivity. This could be due to the ability to mirror them in parallel either side of the transmission line. This was not possible to do with the radial stubs adjacent to the 2.45GHz array due to the 12.92 mm distance from the centre of the feed line to the stub.</p>
+<p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array.</p>
+<p><img src="58current.png" class="img-fluid" style="width:30.0%" alt="58_current"> <img src="245current.png" class="img-fluid" style="width:32.0%" alt="245current"></p>
 </section>
 <section id="final-combined-design" class="level5">
 <h5 class="anchored" data-anchor-id="final-combined-design">Final Combined Design</h5>
 <p>Shown below is the layout of the final combined antenna array design, with rectangular stubs used to match both individual arrays.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="final_design.jpg" class="img-fluid figure-img"></p>
-<figcaption>Final_design</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="new4x2.jpg" class="img-fluid figure-img"></p>
-<figcaption>Fabricated_design</figcaption>
-</figure>
-</div>
+<p><img src="final_design.jpg" class="img-fluid" style="width:40.0%" alt="Final_design"> <img src="new4x2.jpg" class="img-fluid" style="width:40.0%" alt="Fabricated_design"></p>
 </section>
 </section>
 <section id="results" class="level4">
 <h4 class="anchored" data-anchor-id="results">Results</h4>
-<section id="simulations" class="level5">
-<h5 class="anchored" data-anchor-id="simulations">Simulations</h5>
 <p>The simulated results shown below were obtained using ADS keysight for the S11 parameters and Momentum for the Far Field parameters. To model the complex behavior of microwave circuits, ADS uses an approach called Method of Moments (MoM). MoM extrapolates observations in order to make some prediction, and can be used to solve deterministic or eigenvalue problems.</p>
-![Simulated_results]
-</section>
-<section id="measured" class="level5">
-<h5 class="anchored" data-anchor-id="measured">Measured</h5>
-
-</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="combined_comparison_full.png" class="img-fluid figure-img"></p>
+<figcaption>Sim_results</figcaption>
+</figure>
+</div>
 </section>
 </section>
 <section id="multi-thread-gui-traffic-road-system-simulation---java" class="level3">
