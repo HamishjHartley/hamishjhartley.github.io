@@ -146,6 +146,9 @@ window.Quarto = {
    
   <ul>
   <li><a href="#vital-signs-monitoring-using-microstrip-antenna---ads-matlab" id="toc-vital-signs-monitoring-using-microstrip-antenna---ads-matlab" class="nav-link active" data-scroll-target="#vital-signs-monitoring-using-microstrip-antenna---ads-matlab"><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br></a></li>
+  <li><a href="#multi-thread-gui-traffic-road-system-simulation---java" id="toc-multi-thread-gui-traffic-road-system-simulation---java" class="nav-link" data-scroll-target="#multi-thread-gui-traffic-road-system-simulation---java"><em>Multi-thread GUI Traffic road system simulation</em> - Java <br></a></li>
+  <li><a href="#chess-engine---python" id="toc-chess-engine---python" class="nav-link" data-scroll-target="#chess-engine---python"><em>Chess engine</em> - Python <br></a></li>
+  <li><a href="#automated-plant-watering-system---c" id="toc-automated-plant-watering-system---c" class="nav-link" data-scroll-target="#automated-plant-watering-system---c"><em>Automated Plant watering system</em> - C <br></a></li>
   </ul>
 </nav>
     </div>
@@ -175,22 +178,55 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="vital-signs-monitoring-using-microstrip-antenna---ads-matlab"><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br></h3>
 <section id="aims" class="level4">
 <h4 class="anchored" data-anchor-id="aims">Aims</h4>
-<p>The aims of this project were to design and test a dual band microstrip antenna array for vital-signs monitoring applications. The required dual resonating frequencies are 2.45GHz and 5.8GHz respectively.</p>
-<p>Several micro strip arrays have been designed in ADS keysight software; two separate 4x1 arrays which resonate at 2.45GHz and 5.8GHz respectively, which were then combined through the use of rectangular stubs into a 2x4 array which resonates at both frequencies. The combined antenna array was then fabricated on campus at Heriot-watt university and subsequently experimentally tested for its S11 and far-field parameters to evaluate it’s performance.</p>
+<p>The aims of this project were to design and test a dual band microstrip antenna array for vital-signs monitoring applications. The required dual resonating frequencies being 2.45GHz and 5.8GHz respectively.</p>
+<p>Several micro strip arrays were designed in ADS keysight software; two separate 4x1 arrays which resonate at 2.45GHz and 5.8GHz respectively, which were then combined through the use of rectangular stubs into a 2x4 array which resonates at both frequencies. The combined antenna array was then fabricated on campus at Heriot-watt university and subsequently experimentally tested for its S11 and far-field parameters to evaluate it’s performance.</p>
 </section>
 <section id="design" class="level4">
 <h4 class="anchored" data-anchor-id="design">Design</h4>
 <section id="array-design-parameters" class="level5">
 <h5 class="anchored" data-anchor-id="array-design-parameters">Array design parameters</h5>
-<p>The proposed resonating frequencies for the 4x2 final antenna array are 2.45GHz and 5.8GHz. The arrays are to be fabricated on FR-4 substrate, which has a dielectric constant of 4.5 <span class="math inline">\(\epsilon_r\)</span>, loss tangent of 0.022 and height of 1.6 mm. With copper etching of height 0.035 mm.</p>
+<p>Both 4x1 arrays were combined to form a 4x2 array which resonates at dual frequencies 2.45GHz and 5.8GHz. In order to combine the individual arrays, rectangular shunt stubs were used to match the characteristic impedance’s of both arrays’ respective feed lines. Stubs act as a DC open circuit and an RF short circuit corresponding to the 4/<span class="math inline">\(\lambda\)</span> length of the particular resonating frequency. The equivalent circuits are shown below in figure<span class="math inline">\(\ref{fig:equivalent}\)</span>:</p>
 </section>
 <section id="quarter-wave-transformers" class="level5">
 <h5 class="anchored" data-anchor-id="quarter-wave-transformers">Quarter wave transformers</h5>
-<p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array. Combined arrays using both radial and rectangular stubs were initially implemented in ADS keysight and the simulations were compared (see results section); radial stubs have larger bandwidth than rectangular stubs due to their larger fringing capacitance on their outer edge, however rectangular stubs were better suited in this context, with superior S11, gain and directivity. This could be due to the ability to mirror them in parallel either side of the transmission line. This was not possible to do with the radial stubs adjacent to the 2.45GHz array due to the 12.92 mm distance from the centre of the feed line to the stub. ### <em>Multi-thread GUI Traffic road system simulation</em> - Java <br> ### <em>Chess engine</em> - Python <br> ### <em>Automated Plant watering system</em> - C <br></p>
+<p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array. Combined arrays using both radial and rectangular stubs were initially implemented in ADS keysight and the simulations were compared (see results section); radial stubs have larger bandwidth than rectangular stubs due to their larger fringing capacitance on their outer edge, however rectangular stubs were better suited in this context, with superior S11, gain and directivity. This could be due to the ability to mirror them in parallel either side of the transmission line. This was not possible to do with the radial stubs adjacent to the 2.45GHz array due to the 12.92 mm distance from the centre of the feed line to the stub.</p>
+</section>
+<section id="final-combined-design" class="level5">
+<h5 class="anchored" data-anchor-id="final-combined-design">Final Combined Design</h5>
+<p>Shown below is the layout of the final combined antenna array design, with rectangular stubs used to match both individual arrays.</p>
 
+<p>
+<embed src="Final_fullyLabeled.pdf">
+</p>
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="new4x2.jpg" class="img-fluid figure-img"></p>
+<figcaption>Fabricated_design</figcaption>
+</figure>
+</div>
 </section>
 </section>
+<section id="results" class="level4">
+<h4 class="anchored" data-anchor-id="results">Results</h4>
+<section id="simulations" class="level5">
+<h5 class="anchored" data-anchor-id="simulations">Simulations</h5>
+</section>
+<section id="measured" class="level5">
+<h5 class="anchored" data-anchor-id="measured">Measured</h5>
+</section>
+</section>
+</section>
+<section id="multi-thread-gui-traffic-road-system-simulation---java" class="level3">
+<h3 class="anchored" data-anchor-id="multi-thread-gui-traffic-road-system-simulation---java"><em>Multi-thread GUI Traffic road system simulation</em> - Java <br></h3>
+</section>
+<section id="chess-engine---python" class="level3">
+<h3 class="anchored" data-anchor-id="chess-engine---python"><em>Chess engine</em> - Python <br></h3>
+</section>
+<section id="automated-plant-watering-system---c" class="level3">
+<h3 class="anchored" data-anchor-id="automated-plant-watering-system---c"><em>Automated Plant watering system</em> - C <br></h3>
+
+
 </section>
 
 </main> <!-- /main -->
