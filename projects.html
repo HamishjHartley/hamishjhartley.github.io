@@ -183,7 +183,6 @@ window.Quarto = {
   <li><a href="#particle-swarm-optimisation---python" id="toc-particle-swarm-optimisation---python" class="nav-link" data-scroll-target="#particle-swarm-optimisation---python"><em>Particle Swarm Optimisation</em> - Python <br></a></li>
   <li><a href="#multi-thread-gui-traffic-road-system-simulation---java" id="toc-multi-thread-gui-traffic-road-system-simulation---java" class="nav-link" data-scroll-target="#multi-thread-gui-traffic-road-system-simulation---java"><em>Multi-thread GUI Traffic road system simulation</em> - Java <br></a></li>
   <li><a href="#chess-engine---python" id="toc-chess-engine---python" class="nav-link" data-scroll-target="#chess-engine---python"><em>Chess engine</em> - Python <br></a></li>
-  <li><a href="#automated-plant-watering-system---c" id="toc-automated-plant-watering-system---c" class="nav-link" data-scroll-target="#automated-plant-watering-system---c"><em>Automated Plant watering system</em> - C <br></a></li>
   </ul>
 </nav>
     </div>
@@ -212,29 +211,29 @@ window.Quarto = {
 <section id="vital-signs-monitoring-using-microstrip-antenna---ads-matlab" class="level3">
 <h3 class="anchored" data-anchor-id="vital-signs-monitoring-using-microstrip-antenna---ads-matlab"><em>Vital signs monitoring using Microstrip antenna</em> - ADS, MATLAB <br></h3>
 <section id="aims" class="level4">
-<h4 class="anchored" data-anchor-id="aims">Aims</h4>
+<h4 class="anchored" data-anchor-id="aims"><strong>Aims</strong></h4>
 <p>The aims of this project were to design and test a dual band microstrip antenna array for vital-signs monitoring applications. The required dual resonating frequencies being 2.45GHz and 5.8GHz respectively.</p>
 <p>Several micro strip arrays were designed in ADS keysight software; two separate 4x1 arrays which resonate at 2.45GHz and 5.8GHz respectively, which were then combined through the use of rectangular stubs into a 2x4 array which resonates at both frequencies. The combined antenna array was then fabricated on campus at Heriot-watt university and subsequently experimentally tested for its S11 and far-field parameters to evaluate it’s performance.</p>
 </section>
 <section id="design" class="level4">
-<h4 class="anchored" data-anchor-id="design">Design</h4>
+<h4 class="anchored" data-anchor-id="design"><strong>Design</strong></h4>
 <section id="array-design-parameters" class="level5">
-<h5 class="anchored" data-anchor-id="array-design-parameters">Array design parameters</h5>
+<h5 class="anchored" data-anchor-id="array-design-parameters"><em>Array design parameters</em></h5>
 <p>Both 4x1 arrays were combined to form a 4x2 array which resonates at dual frequencies 2.45GHz and 5.8GHz. In order to combine the individual arrays, rectangular shunt stubs were used to match the characteristic impedance’s of both arrays’ respective feed lines. Stubs act as a DC open circuit and an RF short circuit corresponding to the 4/<span class="math inline">\(\lambda\)</span> length of the particular resonating frequency.</p>
 </section>
 <section id="quarter-wave-transformers" class="level5">
-<h5 class="anchored" data-anchor-id="quarter-wave-transformers">Quarter wave transformers</h5>
+<h5 class="anchored" data-anchor-id="quarter-wave-transformers"><em>Quarter wave transformers</em></h5>
 <p>By placing the stubs <span class="math inline">\(\lambda\)</span>/4 distance of of the opposite resonating frequency in parallel along the transmission line, (with the distances being 30.59 mm and 12.92 mm respectively) and setting length of the stubs to be <span class="math inline">\(\lambda\)</span>/4 of the corresponding resonating frequency(with the lengths of the shunt stubs being 12.92mm and 30.59mm respectively) they can be used to effectively short circuit the transmission lines leading to either the 2.45GHz array or the 5.8GHz array depending on the resonating frequency and act as an open circuit depending on the resonating frequency; this allowing current to flow to only one of the 4x1 arrays. This allows both arrays to resonate independently of each other at their intended frequencies without the need for any external components such as a switch to manually operate the array.</p>
 <p><img src="58current.png" class="img-fluid" style="width:30.0%" alt="58_current"> <img src="245current.png" class="img-fluid" style="width:32.0%" alt="245current"></p>
 </section>
 <section id="final-combined-design" class="level5">
-<h5 class="anchored" data-anchor-id="final-combined-design">Final Combined Design</h5>
+<h5 class="anchored" data-anchor-id="final-combined-design"><em>Final Combined Design</em></h5>
 <p>Shown below is the layout of the final combined antenna array design, with rectangular stubs used to match both individual arrays.</p>
 <p><img src="final_design.jpg" class="img-fluid" style="width:40.0%" alt="Final_design"> <img src="new4x2.jpg" class="img-fluid" style="width:40.0%" alt="Fabricated_design"></p>
 </section>
 </section>
 <section id="results" class="level4">
-<h4 class="anchored" data-anchor-id="results">Results</h4>
+<h4 class="anchored" data-anchor-id="results"><em>Results</em></h4>
 <p>The simulated results shown below were obtained using ADS keysight for the S11 parameters and Momentum for the Far Field parameters. To model the complex behavior of microwave circuits, ADS uses an approach called Method of Moments (MoM). MoM extrapolates observations in order to make some prediction, and can be used to solve deterministic or eigenvalue problems.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -247,7 +246,7 @@ window.Quarto = {
 <section id="particle-swarm-optimisation---python" class="level3">
 <h3 class="anchored" data-anchor-id="particle-swarm-optimisation---python"><em>Particle Swarm Optimisation</em> - Python <br></h3>
 <p>PSO was implemented using a list containing each particle as an object. With each particle object having its own location vector, velocity vector, list of random informants and personal best; the location and velocity vector length was adaptable depending on number of dimensions, allowing flexibility of use/testing. The particle class also includes an informant update and personal best update functions for ease of readability and streamlining. A ring topology was used for the social element of the search, meaning each particle is only connected to its neighbours to avoid pre-mature convergence on local optima.</p>
-<p>The implemented PSO algorithm was used to solve some of the CEC 2005 optproblems</p>
+<p>The implemented PSO algorithm was used to solve the CEC 2005 optproblems, which can be found at https://www.simonwessing.de/optproblems/doc/cec2005.html.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>PSO.py</strong></pre>
@@ -306,9 +305,6 @@ window.Quarto = {
 </section>
 <section id="chess-engine---python" class="level3">
 <h3 class="anchored" data-anchor-id="chess-engine---python"><em>Chess engine</em> - Python <br></h3>
-</section>
-<section id="automated-plant-watering-system---c" class="level3">
-<h3 class="anchored" data-anchor-id="automated-plant-watering-system---c"><em>Automated Plant watering system</em> - C <br></h3>
 
 
 </section>
