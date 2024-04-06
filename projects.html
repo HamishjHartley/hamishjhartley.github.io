@@ -246,7 +246,8 @@ window.Quarto = {
 </section>
 <section id="particle-swarm-optimisation---python" class="level3">
 <h3 class="anchored" data-anchor-id="particle-swarm-optimisation---python"><em>Particle Swarm Optimisation</em> - Python <br></h3>
-<p>PSO was implemented using a list containing each particle as an object. With each particle object having its own location vector, velocity vector, list of random informants and personal best; the location and velocity vector length was adaptable depending on number of dimensions, allowing flexibility of use/testing. The particle class also includes an informant update and personal best update functions for ease of readability and streamlining. A ring topology was used for the social element of the search[1], meaning each particle is only connected to its neighbours to avoid pre-mature convergence on local optima.</p>
+<p>PSO was implemented using a list containing each particle as an object. With each particle object having its own location vector, velocity vector, list of random informants and personal best; the location and velocity vector length was adaptable depending on number of dimensions, allowing flexibility of use/testing. The particle class also includes an informant update and personal best update functions for ease of readability and streamlining. A ring topology was used for the social element of the search, meaning each particle is only connected to its neighbours to avoid pre-mature convergence on local optima.</p>
+<p>The implemented PSO algorithm was used to solve some of the CEC 2005 optproblems</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>PSO.py</strong></pre>
